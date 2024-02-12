@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大方茶葉</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        img {
+            max-width: 100%; /* 圖片寬度最大不超過其容器的寬度 */
+            height: auto; /* 保持圖片的原始高寬比例 */
+            display: block; /* 清除底部空白 */
+            margin: 0 auto; /* 水平置中 */
+            border: 1px solid #ddd; /* 可以根據需要添加邊框颜色和樣式 */
+            border-radius: 5px; /* 圖片圓角 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果，可根據需要調整 */
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: none; /* 移除邊框 */
+            border-radius: 10px; /* 圓角 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影效果 */
+        }
+
+        .circle-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #333; /* 按鈕背景色 */
+            color: #fff;
+            border: none;
+            border-radius: 20%; /* 圓形按鈕 */
+            padding: 10px; /* 調整內間距 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .circle-button-right {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 20%;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .circle-button:hover {
+            background-color: #555; /* 滑鼠懸停時的背景色 */
+        }
+
+        section {
+            padding: 20px;
+            border-radius: 5px; /* 區塊圓角 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 區塊陰影效果 */
+            background-color: #fff; /* 區塊背景色 */
+            margin-bottom: 20px; /* 區塊間距 */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a{
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="大方茶葉_logo.jpg" alt="">
+        <h1>大方茶葉</h1>
+        <p>品味優質的茶葉，享受生活的香氣</p>
+    </header>
+
+    <nav>
+        <a href="#home">歡迎</a>
+        <a href="#about">關於我們</a>
+        <a href="#products">茶葉產品</a>
+        <a href="#contact">聯絡我們</a>
+    </nav>
+
+    <section id="home">
+        <h2>歡迎來到大方茶葉</h2>
+        <p>在這裡，我們提供最優質的茶葉，讓您享受純淨的茶香，感受大自然的恩賜。</p>
+        <img src="茶園.jpg" alt="">
+    </section>
+
+    <section id="about">
+        <h2>關於我們</h2>
+        <p>大方茶葉是一家致力於提供高品質茶葉的公司。我們的茶葉來自於優越的種植地，經過精心的製作過程，確保每一片茶葉都保持最佳的品質。</p>
+        <video src="泰獅茶農場X大方茶葉.mp4" controls></video>
+    </section>
+
+    <section id="products">
+        <h2>我們的茶葉產品</h2>
+        <p>探索我們多樣化的茶葉選擇，從清新的綠茶到深邃的紅茶，滿足您對茶葉的所有幻想。</p>
+        <img src="樣品 (1).jpg" alt="">
+        <br>
+        <img src="樣品 (2).jpg" alt="">
+        <!-- 在這裡添加產品圖片和描述 -->
+    </section>
+
+    <section id="contact">
+        <h2>聯絡我們</h2>
+        <p>有任何疑問或想要進一步了解我們的茶葉嗎？請隨時聯絡我們。</p>
+        <img src="名片.png" alt="">
+    </section>
+
+    <button class="circle-button" onclick="scrollToTop()">^</button>
+
+    <footer>
+        <p>&copy; 2024 大方茶葉. All Rights Reserved.</p>
+        <a onclick="showDialog()">網頁詳細訊息</a>
+    </footer>
+
+
+    <script>
+        function showDialog() {
+            var message = "網頁詳細訊息:1.版本1.0.1|2.版本時間:2024/2/12"; // 可根據需要更改內容
+            alert(message);
+        }
+        function scrollToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+</body>
+</html>
