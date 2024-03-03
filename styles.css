@@ -1,0 +1,22 @@
+
+.body{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: underline;
+}
+.i1{
+    border: 1px solid black;
+}
+.footer{
+    text-align: center;
+}
+.title{
+    text-decoration: none;
+    background-color: white;
+    font-size: 50px;
+}
