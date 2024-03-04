@@ -10,17 +10,16 @@
     <div class="head">
         <div>
             <h1><a href="index.htm">大方茶葉</a></h1>
-            <p style="color: red;">本頁為外連文件，若網路不好，需一點時間載入。</p>
         </div>
     </div>
     <hr>
     <div class="body">
-        <iframe loading="lazy" style="position: relative; width: 100%; height: 600px; max-height: 80vh; border: none; padding: 0; margin: 0; overflow: hidden;"
-      src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF-cP9oers&#x2F;9Fhu7jIEtRLkZK_a5PAtmA&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-    </iframe>
     
+    <a href="game.htm"><img src="說明書 (2).jpg" alt="" style="height: 500px;"></a>
+    <br>
+    <img src="說明書 (1).jpg" alt="" style="height: 500px;">        
+
     </div>
-    
     <hr>
     <div class="footer">
         <p>&copy; 許元洧製作 版權所有</p>
@@ -31,7 +30,9 @@
     </div>
 
     <script>
-        
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+            window.location.href = 'p說明書.htm';
+        }
     </script>
 </body>
 </html>

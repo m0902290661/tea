@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>茶葉收成遊戲</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #teaLeaf {
+            width: 100px;
+            height: 100px;
+            background-color: #8fc388;
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+        }
+
+        #score {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="teaLeaf"></div>
+<div id="score">分數: 0</div>
+<a href="index.htm">返回主頁</a>
+
+<script>
+    let score = 0;
+
+    document.getElementById('teaLeaf').addEventListener('click', function() {
+        score++;
+        updateScore();
+        moveTeaLeaf();
+    });
+
+    function updateScore() {
+        document.getElementById('score').innerText = '分數: ' + score;
+    }
+
+    function moveTeaLeaf() {
+        const teaLeaf = document.getElementById('teaLeaf');
+        const maxX = window.innerWidth - teaLeaf.clientWidth;
+        const maxY = window.innerHeight - teaLeaf.clientHeight;
+
+        const newX = Math.floor(Math.random() * maxX);
+        const newY = Math.floor(Math.random() * maxY);
+
+        teaLeaf.style.left = newX + 'px';
+        teaLeaf.style.top = newY + 'px';
+    }
+</script>
+
+</body>
+</html>
